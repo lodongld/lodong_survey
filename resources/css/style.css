@@ -1,0 +1,374 @@
+.bold{
+    font-weight: bold;
+}
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.valuestatcont{
+  margin-top: 1rem !important;
+}
+/* .content{
+  background-image: url('../images/KakaoTalk_bg.svg');
+  background-color: #F6EFE0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: wheat;
+  transition: 0.4s;
+}
+.main {
+  height: auto
+}
+
+nav {
+  color: #F57600;
+}
+.btn-bg {
+  background-color: #FAD58C;
+  border: none;
+  color: #F57600;
+  transition: 0.4s;
+  width: 130px;
+  border-radius: 12px;
+}
+.text-color {
+  color: #5C1C2C;
+}
+
+.text-style {
+  font-weight: bold;
+  font-size: 5rem;
+  margin-top: 25px;
+}
+
+.normal-text-color {
+  color: #5C1C2C;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 18px;
+}
+
+.image-size {
+  width: 39rem;
+  height: 5rem;
+  margin-top: 3rem;
+}
+
+.image-size:hover {
+  cursor: pointer;
+  transition: 0.4s;
+  opacity: 0.6;
+}
+
+.bg-color {
+  background-color: transparent;
+}
+
+.border-button {
+  border-top-color: #5C1C2C;
+  border-bottom-color: #5C1C2C;
+  border-radius: 10px;
+  border-left: none;
+  border-right: none;
+  color: #5C1C2C;
+  padding: 0.7rem;
+}
+
+.border-button:hover {
+  cursor: pointer;
+  border: 1px solid #5C1C2C;
+  border-radius: 10px;
+  transition: 0.4s;
+  opacity: 0.4;
+}
+
+.text-label-drop-down {
+  color: #5C1C2C;
+
+}
+nav{
+    width: 100% !important;
+}
+.navlist{
+    right: 0 px !important;
+    width: auto !important;
+    padding: 0 !important;
+}
+.navbar-brand{
+    font-weight: bold;
+}
+.logo{
+    margin: auto;
+    color: #5C1C2C !important;
+}
+.startbut{
+    width: 100px !important;
+}
+.startbut:hover{
+    cursor: pointer;
+}
+/* .footerindex{
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+} */
+
+.header-logo{
+  margin: 3rem 2rem 2rem 15rem;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin-left: 2rem;
+  background-color: #5C1C2C;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot:hover{
+  cursor: pointer;
+}
+
+
+.header-text-container{
+ background:linear-gradient(90deg, #FAD58C 43.13%, rgba(250, 213, 140, 0) 93.33%);
+}
+
+
+.next-page-indicator a:hover{
+  color: orange;
+  transition: 0.4s ease-in-out;
+ }
+
+.body-text{
+  padding-left: 15rem;
+  font-weight: bold;
+  font-size:20px;
+}
+
+.card-title-t{
+  background-color: #F9E4B2;
+}
+.card-title-t h5{
+  font-weight: bold;
+}
+.card-body{
+  background-color: white;
+}
+.card-height{
+  height: 80px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.card:hover{
+  cursor: pointer;
+}
+
+.agree-question-component{
+  background: #FFCC4A47;
+  border-radius: 18px;
+}
+.disagree-question-component{
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 18px;
+}
+
+.question-card{
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 18px;  
+}
+
+.checkbox:hover{
+  cursor: pointer;
+}
+
+/* .question-stat-card:hover{
+  border: 1px solid orange;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 18px;  
+} */
+
+
+.border{
+  border: 6px solid #FFD772 !important;
+  border-radius: 14px !important;
+}
+
+
+.picture-image:hover{
+  cursor: pointer;
+  transition: 0.6s;
+  border: 1px solid !important;
+}
+
+.tp{
+  cursor: pointer;
+}
+
+
+.left-progress{
+  color: #06C072;
+}
+
+.right-progress{
+ color: #F3681A;
+
+}
+
+/* .scale-text{
+  font-size: 8pt !important;
+} */
+.rotate-left{
+transform: rotate(-15deg);
+}
+.rotate-right{
+transform: rotate(15deg) !important;
+}
+
+.sr-rotate-left{
+transform: rotate(-12deg);
+}
+.sr-rotate-right{
+  transform: rotate(12deg);
+  }
+.a-caption-right {
+position: absolute;
+top: 46%;
+left: 85%;
+transform: translate( -50%, -50% );
+text-align: center;
+}
+.a-caption-left {
+position: absolute;
+top: 46%;
+left: 15%;
+transform: translate( -50%, -50% );
+text-align: center;
+}
+
+.b-caption-left {
+position: absolute;
+top: 32%;
+left: 11%;
+transform: translate( -50%, -50% );
+text-align: center;
+}
+
+.b-caption-right {
+position: absolute;
+top: 50%;
+left: 80%;
+transform: translate( -50%, -50% );
+text-align: center;
+}
+
+.c-caption-left {
+position: absolute;
+top: 50%;
+left: 20%;
+transform: translate( -50%, -50% );
+text-align: center;
+}
+
+.c-caption-right {
+position: absolute;
+top: 33%;
+left: 88%;
+transform: translate( -50%, -50% );
+text-align: center;
+}
+
+.scalelabel{
+  font-size: 5pt;
+  font-weight: bold;
+  color: white;
+}
+
+.scale-contval{
+  border:solid 6px #FFD772;
+  border-radius: 2em !important;
+}
+.cancelbtn, .redobtn {
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  }
+
+  button:hover {
+  opacity:1;
+  }
+
+  /* Float cancel and delete buttons and add an equal width */
+  .cancelbtn, .redobtn {
+  float: left;
+  width: 45%;
+  }
+
+  /* Add a color to the cancel button */
+  .cancelbtn {
+  /* background-color: #ccc; */
+  border: solid 1px #ccc;
+  color: black;
+  }
+
+  /* Add a color to the delete button */
+  .redobtn {
+  /* background-color: #f44336; */
+  border: solid 1px #ccc;
+  color: black;
+  }
+  .cancelbtn, .redobtn {
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    }
+
+    button:hover {
+    opacity:1;
+    }
+
+    /* Float cancel and delete buttons and add an equal width */
+    .cancelbtn, .redobtn {
+    float: left;
+    width: 45%;
+    }
+
+    /* Add a color to the cancel button */
+    .cancelbtn {
+    /* background-color: #ccc; */
+    border: solid 1px #ccc;
+    color: black;
+    }
+
+    /* Add a color to the delete button */
+    .redobtn {
+    /* background-color: #f44336; */
+    border: solid 1px #ccc;
+    color: black;
+    }
+
+    .statement-label{
+      text-align: right;
+    }
+
+    .statement-desc{
+      height: 3rem;
+    }
+    
