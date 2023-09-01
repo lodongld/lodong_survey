@@ -1,7 +1,7 @@
 function validatesession() {
     var tmp = null;
     $.ajax({
-        url: "valsession",
+        url: "/page/valsession/",
         async: false,
         dataType: "json",
         success: function (results) {
@@ -18,7 +18,7 @@ function validatesession() {
 function validateanswer() {
     var tmp = null;
     $.ajax({
-        url: "validateUser",
+        url: "/page/validateUser/",
         async: false,
         dataType: "json",
         success: function (results) {
@@ -52,7 +52,7 @@ function confirmModal(title,message){
 }
 
 async function resetSurvey() {
-    let url = 'clearSession';
+    let url = '/page/clearSession';
     await $.ajax({
         type:'ajax',
         method: 'post',
@@ -62,7 +62,7 @@ async function resetSurvey() {
         success: function(response){
             var error = response.error;
             if (response.success == true) {
-                //window.location.href = 'index';
+                //window.location.href = '/page/index';
             }else{
                 $('.alert-danger').html(error).fadeIn();
                 var title = '에러 메시지!!!';
@@ -79,8 +79,8 @@ async function resetSurvey() {
 
 function activeLink(){
     const path = window.location.pathname;
-    let current = path.substring(16);
-    console.log(path)
+    let current = path.substring(6);
+    
     // linkhome linkvalstat linkqstat linkq linkabout
 
     if(current === "index" || current === ""){
@@ -150,48 +150,7 @@ function activeLink(){
 
 }
 activeLink()
-// if(validatesession() === false && validateanswer() === false)
-// {
-//     $('.redo').removeAttr('id');
-// }else{
-//     $('.redo').attr('id','redo');
-//     $('#redo').click(function() {
-//         var title = '알리다!';
-//         var message = "<p>설문조사를 다시 실행하시겠습니까?<p><p><a href='survey_result'>결과 페이지로 돌아가시겠습니까?</a></p>";
-//         confirmModal(title,message);
-//     });
-//     $('#initiateRedo').click(function() {
-//         var url = 'clearSession';
-//           $.ajax({
-//               type:'ajax',
-//               method: 'post',
-//               url: url,
-//               async: false,
-//               dataType: 'json',
-//               success: function(response){
-//                   var error = response.error;
-//                   if (response.success == true) {
-//                       window.location.href = 'index';
-//                   }else{
-//                       $('.alert-danger').html(error).fadeIn();
-//                       var title = '에러 메시지!!!';
-//                       var message = response.error;
-//                       var type = 'error';	
-//                       alertModal(title,message,type);
-//                   }
-//               },
-//               error: function(){
-//                   $('.alert-danger').html('요청 처리 오류!').fadeIn();
-//               }
-//           });
-//     });
-//     $('#initredo').on('click',function(){
-//         var title = '알리다!!!';
-//         var message = '설문조사를 다시 실행하시겠습니까?';
-//         var type = 'error';
-//         modal(title,message,type);
-//         window.setTimeout(function () {
-//             window.location.href = "index";
-//         },1000);
-//     })
-// }
+
+// $(window).resize(function() {
+//     location.reload();
+// });

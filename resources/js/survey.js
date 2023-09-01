@@ -2,7 +2,7 @@ $(function () {
 	function getData() {
 		var tmp = null;
 		$.ajax({
-			url: "fetchquestion",
+			url: "/page/fetchquestion",
 			async: false,
 			dataType: "json",
 			success: function (results) {
@@ -19,7 +19,7 @@ $(function () {
 	// function validatesession() {
 	// 	var tmp = null;
 	// 	$.ajax({
-	// 		url: "valsession",
+	// 		url: "/page/valsession/",
 	// 		async: false,
 	// 		dataType: "json",
 	// 		success: function (results) {
@@ -217,7 +217,7 @@ $(function () {
 		var type = 'error';
 		modal(title,message,type);
 		window.setTimeout(function () {
-			window.location.href = "index";
+			window.location.href = "/page/index/";
 		},1000);
 	} else 
 	{
@@ -244,7 +244,7 @@ $(function () {
 				dataType: 'json',
 				success: function(response){
 					if(response.status === true){
-						window.location.href = "survey_result";
+						window.location.href = "/page/survey_result/";
 					}else{
 						var title = '에러 메시지!!!';
 						var message = response.error;

@@ -11,7 +11,7 @@
 
 <div class="container p-3">    
     <template id="data-template">
-        <div class="col-lg-10 col-sm-12 question-card">
+        <div class="col-lg-10 col-sm-12 question-card shadow">
             <h5 class="fw-bold p-3 mt-4 text-color">{{question}}</h5>
             <!-- question div -->
             <div class="col-lg-12 d-flex bd-highlight">
@@ -42,11 +42,19 @@
                             </div>
                         </div>
                     </div>
+                </div>                
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg-2 text-color text-center fw-bold">관련 영상: </div>
+                <div class="col-lg-9">
+                    <div class="col-lg-12"><a class="link-secondary" href="{{link1}}}" target="_blank">{{text1}}</a></div>
+                    <div class="col-lg-12"><a class="link-secondary" href="{{link2}}}" target="_blank">{{text2}}</a></div>
+                    <div class="col-lg-12"><a class="link-secondary" href="{{link3}}}" target="_blank">{{text3}}</a></div>
                 </div>
             </div>
         </div>
     </template>
-    <div class="row gap-3 justify-content-evenly d-flex flex-row-reverse bd-highlight" id="questCont">
+    <div class="row gap-5 justify-content-evenly d-flex flex-row-reverse bd-highlight" id="questCont">
     </div>
 </div>
     <!-- Modal -->

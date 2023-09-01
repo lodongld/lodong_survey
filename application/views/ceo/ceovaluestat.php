@@ -85,7 +85,7 @@
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-lg-2 col-sm-12 text-center d-flex flex-row ">
+            <div class="classification col-lg-2 col-sm-12 text-center d-flex flex-row d-none">
                 <div class="col col-lg-6 col-sm-5">
                     <label for="form-select" class="p-3 select-label text-label-drop-down">학년구분</label>
                 </div>
@@ -113,7 +113,7 @@
                     </select>
                     <select id="public" name="public" class="form-select bg-color border-button">
                         <option value="전체">전체</option>
-                        <option value="인문사회">일반</option>
+                        <option value="일반">일반</option>
                     </select>
                 </div>
             </div>

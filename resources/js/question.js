@@ -6,7 +6,7 @@ $(function(){
     function getData() {
 		var tmp = null;
 		$.ajax({
-			url: "fetchquestion",
+			url: "/page/fetchquestion",
 			async: false,
 			dataType: "json",
 			success: function (results) {
@@ -24,7 +24,6 @@ $(function(){
     function displayQuestionStat(dataresult)
     {
         $.each(dataresult,function(i,result){
-            console.log(result.question_num)
             var data = {
                 'qnum': result.question_num,
                 'question': result.question,
@@ -34,6 +33,12 @@ $(function(){
                 'disagree_img':result.disagree_image,
                 'disagree_title':'반대',
                 'disagree_desc':result.disagree_desc,
+				'link1': result.reference1_link,
+				'link2': result.reference2_link,
+				'link3': result.reference3_link,
+				'text1':result.reference1_text,
+				'text2':result.reference2_text,
+				'text3':result.reference3_text,
             }
             listContainer.append(Mustache.render(paginationcont, data)); 
         });

@@ -107,7 +107,7 @@ $(function(){
 	}
 	function activeCeoLink(){
 		const path = window.location.pathname;
-		let ceocurrent = path.substring(15);
+		let ceocurrent = path.substring(5);
 		console.log(ceocurrent)
 		if( ceocurrent === "questions" || ceocurrent === "" ) {
 			$('#qlink').removeClass('btn-bg');
@@ -118,12 +118,18 @@ $(function(){
 			$('#qstatlink').addClass('btn-bg');
 		}
 	}
-	let resultUrl = 'fetchAllAnswer';
+	let resultUrl = '/ceo/fetchAllAnswer';
 	const defaultdata = getData(resultUrl);
 
-	const questionurl = "fetchquestion";
+	const questionurl = "/ceo/fetchquestion";
 	const question = getData(questionurl);
 	
 	activeCeoLink();
     displayQuestionStat(question,defaultdata);
+
+	document.addEventListener("keydown", function(event) {
+		if (event.keyCode === 8 || event.which === 8) {
+			window.location.href = "/page/index";
+		}
+		});
 });

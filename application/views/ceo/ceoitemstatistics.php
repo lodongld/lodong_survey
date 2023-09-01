@@ -18,7 +18,7 @@
     height: 25px;
     }
     .question-stat-card{
-        height: 18vh !important;
+        height: 12vh !important;
     }
 </style>
 
@@ -63,13 +63,13 @@
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-lg-2 col-sm-12 text-center d-flex flex-row ">
-                <div class="col col-lg-5 col-sm-5">
-                    <label for="form-select" class="pt-3 select-label text-label-drop-down">학년구분</label>
+            <div class="classification col-lg-2 col-sm-12 text-center d-flex flex-row d-none">
+                <div class="col col-lg-6 col-sm-5">
+                    <label for="form-select" class="p-3 select-label text-label-drop-down">학년구분</label>
                 </div>
-                <div class="col col-lg-7 col-sm-7">
+                <div class="col col-lg-6 col-sm-7">
                     <select id="elem" name="elem" class="form-select bg-color border-button gap-3">
-                        <option value="">선택</option>
+                        <option value="전체">전체</option>
                         <option value="1학년">1학년</option>
                         <option value="2학년">2학년</option>
                         <option value="3학년">3학년</option>
@@ -78,20 +78,20 @@
                         <option value="6학년">6학년</option>
                     </select>
                     <select id="highschool" name="highschool" class="form-select bg-color border-button">
-                        <option value="">선택</option>
+                        <option value="전체">전체</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
                     <select id="college" name="college" class="form-select bg-color border-button">
-                        <option value="">선택</option>
+                        <option value="전체">전체</option>
                         <option value="인문사회">인문사회</option>
                         <option value="자연 | 공학">자연 | 공학</option>
                         <option value="예체능">예체능</option>
                     </select>
                     <select id="public" name="public" class="form-select bg-color border-button">
-                        <option value="">선택</option>
-                        <option value="인문사회">일반</option>
+                        <option value="전체">전체</option>
+                        <option value="일반">일반</option>
                     </select>
                 </div>
             </div>
@@ -103,7 +103,7 @@
     </form>
 
     <template id="qstat-template">
-        <div class="col-lg-8 col-xs-12 p-5 question-card">
+        <div class="col-lg-8 col-xs-12 p-3 question-card shadow">
             <h5 class="fw-bold mt-4 text-color">{{question}}</h5>
 
             <!-- Here get the total agree and disgree in each question -->
@@ -129,14 +129,14 @@
             <!-- question div -->
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 question-stat-card p-2 bordered" id='{{agreediv}}' data-value="agree" data-qnum='{{qnum}}'>
+                    <div class="col-lg-6 question-stat-card p-2" id='{{agreediv}}' data-value="agree" data-qnum='{{qnum}}'>
                         <div class="text-left p-2 text-color row">
                             <!-- <div class="col-lg-1"><input class="form-check-input checkbox" name="checkbox{{qnum}}" type="checkbox" value="agree" id="confirm_agree"></div>                             -->
                             <div class="col-lg-3 col-xxl-3 col-sm-12 col-xs-12 statement-label">찬성 :</div>
                             <div class="col-lg-9 col-xxl-9 col-sm-12 col-xs-12"><span>{{agree_desc}}</span></div>
                         </div>
                     </div>
-                    <div class="col-lg-6 question-stat-card p-2 bordered disagree-question-card" id='{{disagreediv}}'
+                    <div class="col-lg-6 question-stat-card p-2 disagree-question-card" id='{{disagreediv}}'
                         data-value="disagree" data-qnum='{{qnum}}'>
                         <div class="text-left p-2 text-color row">
                             <!-- <div class="col-lg-1"><input class="form-check-input checkbox" name="checkbox{{qnum}}" type="checkbox" value="agree" id="confirm_agree"></div>                             -->
@@ -149,7 +149,7 @@
         </div>
     </template>
 
-    <div class="row gap-3 mt-3 justify-content-evenly d-flex flex-row-reverse bd-highlight" id="questCont">
+    <div class="row gap-5 mt-3 justify-content-evenly d-flex flex-row-reverse bd-highlight" id="questCont">
     </div>
 </div>
 <!-- Modal -->

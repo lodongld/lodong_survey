@@ -1,56 +1,55 @@
 $(function () {
-	if (window.location.href === "http://210.99.223.38:20002") {
-		window.location.href = "http://210.99.223.38:20002/index.php/page";
-	}
+	
 	const elemlevel = $("#elem");
 	const highschool = $("#highschool");
 	const college = $("#college");
 	const public_sec = $("#public");
 	const awareness = $("#awareness");
+	const classification = $('.classification');
 
 	function getShowList(school) {
 		if (school === "초등학생") {
 			elemlevel.show();
 			highschool.hide();
 			college.hide();
-			public_sec.hide();
-			
-			awareness.show();
+			public_sec.hide();	
+
+			classification.removeClass('d-none');
 		} else if (school === "중학생") {
 			highschool.show();
 			elemlevel.hide();
 			college.hide();
 			public_sec.hide();
 
-			awareness.show();
+			classification.removeClass('d-none');
 		} else if (school === "고등학생") {
 			highschool.show();
 			elemlevel.hide();
 			college.hide();
 			public_sec.hide();
 			
-			awareness.show();
+			classification.removeClass('d-none');
 		} else if (school === "대학") {
 			college.show();
 			elemlevel.hide();
 			highschool.hide();
 			public_sec.hide();
 			
-			awareness.show();
+			classification.removeClass('d-none');
 		} else if (school === "일반인") {
 			public_sec.show();
 			elemlevel.hide();
 			highschool.hide();
 			college.hide();
 			
-			awareness.show();
+			classification.removeClass('d-none');
 		} else {
 			elemlevel.hide();
 			highschool.hide();
 			college.hide();
 			public_sec.hide();
+			classification.addClass('d-none');
 			
-			awareness.hide();
 		}
 	}
 
@@ -64,11 +63,11 @@ $(function () {
 	
 	if(validatesession() === true && validateanswer() === false){
 		$('#continuesurvey').click(function() {
-			window.location.href = 'survey_page';
+			window.location.href = '/page/survey_page';
 		});
 		
 		$('#cancelsurvey').click(function() {
-			var url = 'cancelSurvey';
+			var url = '/page/cancelSurvey';
 			$.ajax({
 				type:'ajax',
 				method: 'post',
@@ -78,7 +77,7 @@ $(function () {
 				success: function(response){
 					var error = response.error;
 					if (response.success == true) {
-						window.location.href = 'index';
+						window.location.href = '/page/index';
 					}else{
 						$('.alert-danger').html(error).fadeIn();
 						var title = '에러 메시지!!!';
@@ -114,10 +113,13 @@ $(function () {
 	//if check box is checked add class to start image to enable start
 	$("#confirm_agree").change(function () {
 		if ($(this).is(":checked")) {
+			
 			$("#dummyBut").fadeOut("fast");
+			$("#submitform").removeClass('d-none')
 			$("#submitform").fadeIn("slow");
 		} else {
 			$("#submitform").fadeOut("fast");
+			$("#submitform").addClass('d-none')
 			$("#dummyBut").fadeIn("slow");
 		}
 	});
@@ -149,7 +151,7 @@ $(function () {
 				dataType: 'json',
 				success: function(response){
 					if(response.status === true){		
-						window.location.href = "survey_page";						
+						window.location.href = "/page/survey_page/";						
 					}else{
 						console.log("error adding");
 						var title = '이런!!!';
@@ -167,7 +169,7 @@ $(function () {
 				}
 			});
 		}else{
-			window.location.href = "survey_page";
+			window.location.href = "/page/survey_page/";
 		}		
 		
 	});
@@ -179,7 +181,7 @@ $(function () {
 			var type = 'error';
 			modal(title,message,type);
 		}else{
-			window.location.href = "survey_result";
+			window.location.href = "/page/survey_result";
 		}
 	});		
 });

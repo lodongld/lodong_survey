@@ -25,7 +25,7 @@ $(function () {
 	}
 
 	function displayResults(){
-		let url = "fetchResultData";
+		let url = "/page/fetchResultData";
 		let data = getData(url);
 
 		//set containers
@@ -64,7 +64,7 @@ $(function () {
 	// function validatesession() {
 	// 	var tmp = null;
 	// 	$.ajax({
-	// 		url: "valsession/",
+	// 		url: "/page/valsession/",
 	// 		async: false,
 	// 		dataType: "json",
 	// 		success: function (results) {
@@ -94,7 +94,7 @@ $(function () {
 	}
 
 	if(validatesession() == false){
-		window.location.href = 'index';
+		window.location.href = '/page/index';
 	}else{			
 		displayResults();	
 	}
